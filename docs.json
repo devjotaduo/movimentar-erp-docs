@@ -1,0 +1,17 @@
+{
+  "$schema": "https://docs.page/schema.json",
+  "name": "Movimentar ERP",
+  "description": "ERP e PWA de campo da Movimentar Locações",
+  "sidebar": [
+    {
+      "group": "Movimentar ERP",
+      "pages": [
+        {
+          "title": "Visão geral",
+          "href": "/",
+          "icon": "rocket"
+        }
+      ]
+    }
+  ]
+}
