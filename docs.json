@@ -22,6 +22,31 @@
           "icon": "graduation-cap"
         }
       ]
+    },
+    {
+      "group": "Guias passo a passo",
+      "pages": [
+        {
+          "title": "Usuários e acessos",
+          "href": "/guia-usuarios",
+          "icon": "user-plus"
+        },
+        {
+          "title": "Programação do Dia",
+          "href": "/guia-programacao",
+          "icon": "calendar-day"
+        },
+        {
+          "title": "Propostas",
+          "href": "/guia-propostas",
+          "icon": "file-signature"
+        },
+        {
+          "title": "WhatsApp",
+          "href": "/guia-whatsapp",
+          "icon": "whatsapp"
+        }
+      ]
     }
   ]
 }
