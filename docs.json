@@ -20,6 +20,11 @@
           "title": "Tutorial",
           "href": "/tutorial",
           "icon": "graduation-cap"
+        },
+        {
+          "title": "Vídeos",
+          "href": "/videos",
+          "icon": "circle-play"
         }
       ]
     },
