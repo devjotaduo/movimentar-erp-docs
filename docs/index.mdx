@@ -1,31 +1,77 @@
 ---
-title: Movimentar ERP
-description: ERP e PWA de campo da Movimentar Locações
+title: Introdução
+description: O que é o Movimentar ERP, como o trabalho anda dentro dele e onde fica cada coisa
 icon: rocket
 ---
 
 # Movimentar ERP
 
-Monorepo `pnpm` + `turbo` com o backend NestJS/Prisma e o front React da
-Movimentar Locações.
+O sistema de gestão da **Movimentar Locações** — locação de equipamentos com
+operador para obras. Ele cobre a corrente inteira de uma operação: o cliente
+pede, a proposta é aprovada, o equipamento vai para a obra com equipe, o líder
+confirma o que foi executado, o período é medido, a nota sai e o dinheiro entra.
 
-## Módulos
+O que o sistema existe para responder, na frase do dono:
 
-- **Comercial / Faturamento** — proposta, medição e autorização
-- **Contas a pagar**
-- **Programação da operação e manutenção** — equipe, líder e execução no PWA de campo
-- **Folha de pagamento e RH**
+> "Que a gente consiga acompanhar o processo do início ao fim."
 
-## Especificações
+## Quem usa, e por onde
 
-Este repositório é **público** e existe só para o site do docs.page. Os
-documentos de requisito e o material de cliente ficam no repositório privado
-`devjotaduo/movimentar-erp` e **não** devem ser copiados para cá sem revisão.
+<CardGroup cols={2}>
+  <Card title="Escritório" icon="desktop">
+    Comercial, financeiro e administração usam a **tela larga**, com a lateral de
+    módulos. É onde a proposta nasce, a operação é programada e a cobrança é
+    acompanhada.
+  </Card>
+  <Card title="Campo" icon="helmet-safety">
+    O operacional usa o **PWA de campo**, em celular. Ao logar, ele cai direto lá
+    — não passa pelo escritório. Funciona **offline**: o que for registrado sem
+    sinal entra numa fila e sobe quando a conexão volta.
+  </Card>
+</CardGroup>
 
-## Comandos
+## A corrente, de ponta a ponta
 
-```bash
-pnpm dev:apps
-pnpm test
-pnpm lint
+```mermaid
+graph TD
+    A["Proposta<br/>Comercial"] --> B["Contrato"]
+    B --> C["Programação do Dia<br/>equipamento, equipe e líder"]
+    C --> D["PWA de campo<br/>saída, checklist, fotos, assinatura"]
+    D --> E["Autorização de serviço<br/>o líder confirma o executado"]
+    E --> F["Medição do período"]
+    F --> G{"Cliente aprova<br/>por link próprio"}
+    G -->|aprovada| H["Nota fiscal"]
+    G -->|contestada| F
+    H --> I["Contas a receber"]
+    I --> J["Conciliação bancária"]
+    K["Funil de Faturamento"] -.acompanha.-> E
+    K -.acompanha.-> F
+    K -.acompanha.-> H
+    K -.acompanha.-> I
 ```
+
+O **Funil de Faturamento** não é mais um passo: é a tela que olha os quatro
+últimos e diz onde cada operação parou e há quanto tempo. É por ela que se
+descobre dinheiro represado antes que o cliente reclame.
+
+## O que fica sempre à mão
+
+Cinco telas ficam soltas no **topo da lateral**, sem grupo, porque são as que se
+abre todo dia:
+
+| Tela | Para que serve |
+|---|---|
+| **Visão geral** | O painel: como está a operação hoje |
+| **Alertas** | O que exige ação — vencimento, pendência, divergência |
+| **Programação do Dia** | O quadro do dia: equipamento, equipe, líder e atividade |
+| **Funil de Faturamento** | Onde cada operação parou entre o executado e o recebido |
+| **WhatsApp** | O canal com o cliente, dentro do sistema |
+
+O resto do sistema fica nos grupos abaixo desses atalhos —
+[a lista completa está em Módulos](/modulos).
+
+## Por onde começar
+
+<Card title="Tutorial" icon="graduation-cap" href="/tutorial">
+  O passo a passo da corrente, do orçamento ao recebimento.
+</Card>

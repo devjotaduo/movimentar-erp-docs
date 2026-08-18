@@ -1,15 +1,20 @@
 {
   "$schema": "https://docs.page/schema.json",
   "name": "Movimentar ERP",
-  "description": "ERP e PWA de campo da Movimentar Locações",
+  "description": "Sistema de gestão da Movimentar Locações: da proposta ao recebimento",
   "sidebar": [
     {
       "group": "Movimentar ERP",
       "pages": [
         {
-          "title": "Visão geral",
+          "title": "Introdução",
           "href": "/",
           "icon": "rocket"
+        },
+        {
+          "title": "Módulos",
+          "href": "/modulos",
+          "icon": "table-cells"
         },
         {
           "title": "Tutorial",
