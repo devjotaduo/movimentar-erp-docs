@@ -45,6 +45,11 @@
           "title": "WhatsApp",
           "href": "/guia-whatsapp",
           "icon": "whatsapp"
+        },
+        {
+          "title": "Aplicativo de campo",
+          "href": "/guia-campo",
+          "icon": "mobile-screen"
         }
       ]
     }
