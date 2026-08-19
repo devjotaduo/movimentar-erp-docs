@@ -19,12 +19,6 @@ O painel de entrada: como está a operação hoje. Mostra a capacidade e a posi�
 financeira, a concentração do negócio nos últimos 12 meses e o que precisa de
 atenção — equipamento com manutenção pendente, medição pronta para faturar.
 
-### Alertas
-
-Vencimentos, pendências e estoque — verificados automaticamente todo dia. É a
-lista do que exige ação: documento vencendo, conta atrasando, item abaixo do
-mínimo. O alerta aponta para a tela onde se resolve.
-
 ### Programação do Dia
 
 A grade diária de operações, do agendamento ao pagamento. É aqui que se define,
@@ -32,42 +26,43 @@ para cada frente de trabalho: o equipamento, a equipe, **quem é o líder** e qu
 a atividade. O que for programado aparece no aplicativo de campo de quem vai
 executar.
 
+
+## Cadastros
+
 ### Clientes
 
 Cadastro de clientes e contatos: quem contrata, quem recebe a cobrança e quem
 aprova a medição.
 
-### Funil de Faturamento
+### Funcionários (CLT)
 
-Onde cada operação parou entre o executado e o recebido. Filtre a fila, mude o
-status e siga até o dinheiro entrar — é por esta tela que se descobre serviço
-feito e ainda não cobrado.
+Quadro CLT e dados de admissão: cadastro, documentos e contrato de cada
+funcionário.
 
-### WhatsApp
+### Terceirizados
 
-O número que envia as notificações do sistema — cobrança, aviso de medição,
-comunicação com o cliente — conectado e administrado por aqui.
+Equipamentos locados de terceiros e repassados: o custo que se paga ao dono e
+o valor que se cobra do cliente, lado a lado, para a margem ficar visível.
 
-## Faturamento
+### Fornecedores
 
-O trecho entre o serviço executado e a cobrança emitida.
+Parceiros de compra e locação: quem fornece peça, serviço ou equipamento.
 
-### Autorizações de serviço
+### Folha de pagamento
 
-O fechamento de cada dia de trabalho. Confira os horários e as evidências que
-vieram do campo — fotos, assinatura, medidores — antes de liberar o serviço
-para medição. É o documento que prova o executado e autoriza cobrar.
+Lançamentos mensais por funcionário: proventos, descontos e o fechamento do
+mês.
 
-### Medições
+### Ponto
 
-Junta as autorizações do período no que será faturado. Acompanhe o fechamento
-do serviço até a autorização do cliente e o faturamento: o cliente recebe um
-**link próprio** para aprovar a medição, sem precisar entrar no sistema. Medição
-aprovada fica pronta para virar nota.
+Registros de entrada, saída e horas extras.
+
+### Usuários
+
+Quem entra no sistema e com qual papel. Só o administrador vê. O passo a passo de criar acesso está no [guia de usuários](/guia-usuarios).
+
 
 ## Comercial
-
-Onde a operação nasce.
 
 ### Propostas
 
@@ -76,8 +71,7 @@ desconto, validade e condições. Da proposta aprovada nasce o contrato.
 
 ### Modelo da proposta
 
-Como o documento que vai para o cliente é montado: texto de abertura e
-condições de pagamento salvos uma vez, usados em todas as propostas.
+Abre pelo botão **Modelo do documento**, dentro de Propostas. É onde o dono define como o PDF sai: logo, cor, textos padrão, os títulos das colunas de valor e a folha de assinaturas. O que a proposta não escrever, sai daqui.
 
 ### Contratos
 
@@ -88,6 +82,41 @@ programar a operação — sem ele, nada entra na grade do dia.
 
 Canteiros e frentes de trabalho. Toda operação acontece numa obra, e a obra
 pertence a um cliente — é o endereço do serviço e da entrega.
+
+
+## Fluxo operacional
+
+O serviço executado e a validação do líder, antes de virar medição.
+
+### Autorizações de serviço
+
+O fechamento de cada dia de trabalho. Confira os horários e as evidências que
+vieram do campo — fotos, assinatura, medidores — antes de liberar o serviço
+para medição. É o documento que prova o executado e autoriza cobrar.
+
+
+## Fluxo de faturamento
+
+### Medições
+
+Junta as autorizações do período no que será faturado. Acompanhe o fechamento
+do serviço até a autorização do cliente e o faturamento: o cliente recebe um
+**link próprio** para aprovar a medição, sem precisar entrar no sistema. Medição
+aprovada fica pronta para virar nota.
+
+### Funil de Faturamento
+
+Onde cada operação parou entre o executado e o recebido. Filtre a fila, mude o
+status e siga até o dinheiro entrar — é por esta tela que se descobre serviço
+feito e ainda não cobrado.
+
+### Notas fiscais
+
+Documento emitido, emissão de NF-e e as retenções que incidem. Reúne as notas
+emitidas para clientes e as recebidas de fornecedores, a emissão de novas
+notas e as **regras de retenção** — nenhuma alíquota é assumida pelo sistema:
+o que incide é o que foi configurado.
+
 
 ## Financeiro
 
@@ -101,19 +130,13 @@ já entrou.
 Obrigações com fornecedores: despesa da operação, locação de terceiro, compra
 de peça — com vencimento e situação de pagamento.
 
-### Notas fiscais
-
-Documento emitido, emissão de NF-e e as retenções que incidem. Reúne as notas
-emitidas para clientes e as recebidas de fornecedores, a emissão de novas
-notas e as **regras de retenção** — nenhuma alíquota é assumida pelo sistema:
-o que incide é o que foi configurado.
-
 ### Conciliação bancária
 
 Importe o extrato do banco e transforme os lançamentos em baixa de título: o
 que o banco confirma vira recebimento ou pagamento quitado no sistema.
 
-## Frota e almoxarifado
+
+## Frota Movimentar
 
 ### Frota
 
@@ -126,6 +149,9 @@ Tudo da máquina, num lugar só:
 - **Peças** — o que é conferido por número na saída e no retorno do equipamento;
 - **Divergências** — peças que voltaram com número diferente do que saiu, ou não foram encontradas.
 
+
+## Almoxarifado
+
 ### Almoxarifado
 
 O estoque e a contagem:
@@ -134,36 +160,17 @@ O estoque e a contagem:
 - **Ferramentas** — ferramenta na mão de quem, com o histórico de quem pegou e devolveu;
 - **Inventário** — contagem física do almoxarifado; as diferenças viram ajuste no histórico do item.
 
-## Pessoas
 
-### Funcionários (CLT)
-
-Quadro CLT e dados de admissão: cadastro, documentos e contrato de cada
-funcionário.
-
-### Folha de pagamento
-
-Lançamentos mensais por funcionário: proventos, descontos e o fechamento do
-mês.
-
-### Ponto
-
-Registros de entrada, saída e horas extras.
-
-### Terceirizados
-
-Equipamentos locados de terceiros e repassados: o custo que se paga ao dono e
-o valor que se cobra do cliente, lado a lado, para a margem ficar visível.
-
-### Fornecedores
-
-Parceiros de compra e locação: quem fornece peça, serviço ou equipamento.
-
-## Apoio
+## Relatórios
 
 ### Relatórios
 
 Faturamento, rentabilidade e cobrança no período escolhido.
+
+### Dados da empresa
+
+A identidade que assina a nota-fatura de locação: razão social, endereço,
+contato e numeração dos documentos. Mexe-se uma vez.
 
 ### Documentos
 
@@ -179,14 +186,23 @@ Pendências da equipe: o que precisa ser feito, por quem e até quando.
 O que o histórico deixou incompleto — cada aba é um mutirão que zera:
 duplicado, campo vazio, registro órfão. Cadastro limpo é cobrança sem erro.
 
-### Dados da empresa
-
-A identidade que assina a nota-fatura de locação: razão social, endereço,
-contato e numeração dos documentos. Mexe-se uma vez.
-
 ### Tutorial
 
 Esta documentação, dentro do sistema.
+
+
+## Alertas e WhatsApp
+
+### Alertas
+
+Vencimentos, pendências e estoque — verificados automaticamente todo dia. É a
+lista do que exige ação: documento vencendo, conta atrasando, item abaixo do
+mínimo. O alerta aponta para a tela onde se resolve.
+
+### WhatsApp
+
+O número que envia as notificações do sistema — cobrança, aviso de medição,
+comunicação com o cliente — conectado e administrado por aqui.
 
 ## O aplicativo de campo
 
